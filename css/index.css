@@ -53,6 +53,28 @@ body {
     font-size: .9em;
 }
 
+
+/* Navigation Section Styling*/
+#nav-section {
+    grid-column: 10/11;
+    grid-row: 1/1; 
+}
+
+#nav-section > ul {
+    display: flex;
+    margin-right: 2em;
+}
+
+.nav-links > a > li {
+    margin: .8em;
+    font-size: 1.2em;
+}
+
+.nav-links > a {
+    text-decoration: none;
+    color: #fff;
+}
+
 #intro-image-section {
     display: flex;
     justify-content: right;
