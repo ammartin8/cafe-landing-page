@@ -201,6 +201,33 @@ div#about-image-section ul.nav-circles {
 }
 
 
+div#contact-page {
+    display: flex;
+    flex-direction: row;
+}
+
+ul.contact-list> li.contact-list-items {
+    display: flex;
+    flex-direction: row;
+}
+
+div.contact-image-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-image-front {
+    display: inline;
+    position: relative;
+    z-index: 100;
+}
+
+.contact-image-back {
+    display: inline;
+    position: relative;
+    z-index: -100;
+}
+
 @media (min-width:320px) {
     /* smartphones, iPhone, portrait 480x320 phones */
 }
