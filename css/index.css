@@ -96,33 +96,59 @@ ul.nav-circles>li {
     height: 30px;
 }
 
-
-#main-container ul.nav-circles>li:first-child>a>svg>circle {
-    fill: #000;
+ul.nav-circles>li a {
+    display: block;
+    width: 30px;
+    height: 30px;
 }
+
 
 svg.circle-nav-item {
     width: 30px;
     height: 30px;
-    fill: #FBF4F4;
+    /* fill: #FBF4F4; */
 }
 
 
+/* #main-container ul.nav-circles>li:first-child>a>svg>circle {
+    fill: #000;
+} */
+
+
 /*About Page Styling*/
-#about-page {
+#wrapper {
+    display:flex;
+}
+
+#about-image-section {
     display: flex;
-    flex-direction: row;
+    justify-content: end;
+    align-items: end;
     width: 100%;
-    height: 100vh;
-    background-color: #FBF4F4;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-image: url(../images/about-bkg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about-page {
+    width: 100%;
+    min-width: 50%;
+    max-height: 100vh;
+    min-height: 100vh;
 }
 
 div.about-desc-section {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 400px;
+    min-height: 500px;
     justify-content: center;
-    padding: 5em;
+    padding: 50px;
+    margin-top: 5em;
+    white-space: normal;
 }
 
 h1.about-title {
@@ -157,18 +183,23 @@ p.about-desc {
 }
 
 
-div.about-image-section {
-    width: 100%;
-    height: 100vh;
-    /* background-image: url(../images/about-bkg.png);
-    background-repeat: no-repeat;
-    background-size: cover; */
-}
-
 img.about-image-bkg {
     width: 100%;
     height: 100vh;
 }
+
+div#about-image-section > div.nav-circles-section {
+    /* display: flex; */
+    height: 80px;
+    margin-bottom: 3em;
+    margin-right: 3em;
+}
+
+div#about-image-section ul.nav-circles {
+    display: flex;
+    flex-direction: column;
+}
+
 
 @media (min-width:320px) {
     /* smartphones, iPhone, portrait 480x320 phones */
