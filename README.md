@@ -1,10 +1,10 @@
-# Project Title: Product Landing Page - A's Cafe
+# Project Title: Product Landing Page - JT Travel Agency Product Landing Page
 
 ***
 
 > Author: Amah Martin
 >
-> Last Updated: 7-3-2020
+> Last Updated: 7-26-2020
 
 ## Table of Contents
 
@@ -23,19 +23,18 @@ This is product landing website example showing a cafe restaurant with various f
 The following technologies are used to build this application:
 
 * HTML, CSS, JavaScript
-* Bootstrap
 
 ## Features
 
 * Core Features will include the following\:
-    1. A main page displaying cafe and drink products
+    1. A home page featuring a landing page of Japan
     2. A email sign up for users
 
 ## Milestones
 
 1. Create Intro Main Landing Page
-2. Create Additional Landing Product Page displaying cafe features
-3. Create sign up page
+2. Create An About Us Page
+3. Create Contact Us Page
 4. Add validation errors if information is not correct or missing
 5. Work on thank you page upon submission of form
 
