@@ -14,15 +14,27 @@ body {
 
 /*Homepage Styling*/
 #main-container {
-    width: 100%;
-    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'background';
+    grid-area: background;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-height:100vh;
+    object-fit: contain;
     background-image: url(../images/home-bkg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 #home-page {
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+        'head head head head head head'
+        'mid mid mid mid mid mid'
+        'foot foot foot foot foot nav';
     flex-direction: column;
     margin: auto;
     position: relative;
@@ -31,6 +43,7 @@ body {
 }
 
 #nav-section {
+    grid-area: head;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,6 +52,7 @@ body {
 }
 
 ul.nav-links {
+    grid-area: link;
     display: flex;
     flex-direction: row;
     align-items: right;
@@ -62,12 +76,17 @@ ul.nav-links li {
 
 }
 
-.main-logo {
+.main-logo {    
     width: 95px;
     height: 95px;
 }
 
+div.hero-section {
+    grid-area: mid;
+}
+
 h1.hero-title {
+    grid-area: mid;
     font-family: 'Philosopher', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -79,8 +98,9 @@ h1.hero-title {
 }
 
 div.nav-circles-section {
+    grid-area: nav;
+    align-self: start;
     height: 80px;
-    margin-top: 2em;
 }
 
 ul.nav-circles {
@@ -117,24 +137,31 @@ svg.circle-nav-item {
 
 /*About Page Styling*/
 #wrapper {
-    display:flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        'left left right right'
+        'left left right right';
 }
 
 #about-image-section {
+    grid-area: right;
     display: flex;
     justify-content: end;
     align-items: end;
-    width: 100%;
-    min-height: 100vh;
-    max-height: 100vh;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-height:100vh;
+    object-fit: contain;
     background-image: url(../images/about-bkg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
 }
 
 #about-page {
-    width: 100%;
-    min-width: 50%;
+    grid-area: left;
     max-height: 100vh;
     min-height: 100vh;
 }
@@ -143,7 +170,6 @@ div.about-desc-section {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-width: 400px;
     min-height: 500px;
     justify-content: center;
     padding: 50px;
@@ -158,7 +184,7 @@ h1.about-title {
     font-size: 60px;
     line-height: 81px;
     text-align: left;
-    margin:0;
+    margin: 0;
     color: #000000;
 }
 
@@ -168,7 +194,7 @@ h2.about-subtitle {
     font-weight: 500;
     font-size: 30px;
     line-height: 35px;
-    margin:.5em 0;
+    margin: .5em 0;
     color: #000000;
 }
 
@@ -178,7 +204,7 @@ p.about-desc {
     font-weight: normal;
     font-size: 20px;
     line-height: 25px;
-    margin:.5 0;
+    margin: .5 0;
     color: #000000;
 }
 
@@ -188,8 +214,8 @@ img.about-image-bkg {
     height: 100vh;
 }
 
-div#about-image-section > div.nav-circles-section {
-    /* display: flex; */
+div#about-image-section>div.nav-circles-section {
+    align-self: end;
     height: 80px;
     margin-bottom: 3em;
     margin-right: 3em;
@@ -202,30 +228,118 @@ div#about-image-section ul.nav-circles {
 
 
 div#contact-page {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        'left left right right'
+        'left left right right';
+    width: 100%;
+    /* min-width: 50%; */
+    max-height: 100vh;
+    min-height: 100vh;
+    background: #FBF4F4;
 }
 
-ul.contact-list> li.contact-list-items {
+div.contact-info {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 100vh;
+    min-height: 500px; 
+    padding: 15% 15%;
+    white-space: nowrap;
+}
+
+h1.contact-title {
+    font-family: 'Philosopher', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 81px;
+    text-align: left;
+    margin: 0;
+    color: #000000;
+}
+
+div.contact-list-section {
+    width: 100%;
+}
+
+div.contact-list-section>ul.contact-list li.contact-list-items img {
+    width: 50px;
+    height: auto;
+}
+
+
+ul.contact-list>li.contact-list-items {
     display: flex;
     flex-direction: row;
+    margin: 2.5em 0;
+}
+
+ul.contact-list>li.contact-list-items>p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 35px;
+
+    color: #000000;
 }
 
 div.contact-image-section {
+    grid-area: right;
+    position: relative;
+    width: 100%;
+    /* min-height: auto; */
+    max-height: 100vh;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
 }
 
 .contact-image-front {
-    display: inline;
-    position: relative;
-    z-index: 100;
+    position: relative; 
+    /* width: auto; */
+    flex-shrink: 0;
+    max-width: 70%;
+    min-height: auto;
+    max-height:70%;
+    object-fit: contain;
+    left: 1rem;
+    top: 5rem;
+    z-index: 2;
 }
 
 .contact-image-back {
-    display: inline;
     position: relative;
-    z-index: -100;
+    flex-shrink: 0;
+    max-width: 70%;
+    min-height: auto;
+    max-height:70%;
+    object-fit: contain;
+    top: 2rem;
+    left: -22rem;
+   z-index: 1;
+    
+}
+
+.contact-image {
+   
+}
+
+.contact-image-bkg {
+    
+   
+}
+
+/* Work on This! */
+div#contact-page div.nav-circles-section {
+    position: relative;
+    top: 13%;
+    right: 20%;
+    z-index: 2;
+    display: none;  
 }
 
 @media (min-width:320px) {
