@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#confirmation-page{
+    display: grid;
+    grid-template-areas: 
+        'left right';
+    grid-template-columns: 1fr 1fr;
+   max-height: 100vh;
+   min-height: 100vh;
+   width: 100%;
+}
+
+video#bkgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 500px;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: #000 no-repeat;
+    background-size: cover; 
+}
+.conf-video-section {
+    /* grid-area: left; */
+    min-width: 100%;
+    width: 100%;
+}
+
+.conf-desc-section {
+    grid-area: right;
+    align-self: center;
+    width: 100%;
+    padding: 1em;
+}
+
+.conf-desc-section p.thank-title {
+    color: #fff;
+    text-align: center;
+    font-size: min(max(1rem, 4vw), 50px);
+}
+
+.conf-desc-section p.thank-subtitle {
+    color: #fff;
+    text-align: center;
+    font-size: min(max(1rem, 1.8vw), 22px);
+}

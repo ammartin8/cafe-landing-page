@@ -35,8 +35,8 @@ The following technologies are used to build this application:
 1. Create Intro Main Landing Page ✔️
 2. Create An About Us Page ✔️
 3. Create Contact Us Page ✔️
-4. Add validation errors if information is not correct or missing
-5. Work on thank you page upon submission of form
+4. Add validation errors if information is not correct or missing ✔️
+5. Work on thank you page upon submission of form ✔️
 
 ## Requirements to Run Application
 
