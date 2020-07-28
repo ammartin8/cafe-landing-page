@@ -13,7 +13,7 @@ body {
 }
 
 /*Homepage Styling*/
-#home-page {
+#header {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -44,7 +44,7 @@ body {
     height: 100vh;
 }
 
-#nav-section {
+#nav-bar {
     grid-area: head;
     display: flex;
     flex-direction: row;
@@ -245,26 +245,33 @@ div.about-image-section ul.nav-circles {
 div#contact-page {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-        '. .'
-        'ml mr'
-        '. .';
+        '..    ..'
+        'ml    mr'
+        '.. ..';
     width: 100%;
     max-height: 100vh;
     min-height: 100vh;
     background: #FBF4F4;
 }
 
-div.contact-info {
+div.contact-info-section {
     grid-area: ml;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas:
+        'contact'
+        'email';
     width: 100%;
     max-height: 100vh;
     min-height: 100vh;
     white-space: nowrap;
     justify-content: center;
     align-items: center;
+}
+
+.contact-info {
+    grid-area: contact;
 }
 
 h1.contact-title {
@@ -302,6 +309,39 @@ ul.contact-list>li.contact-list-items>p {
     color: #000000;
 }
 
+form#form {
+    grid-area: email;
+    align-self:start;
+}
+
+#form label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: min(max(1rem, 2vw), 18px);
+    color: #000000;
+    word-wrap: break-word;
+}
+
+input#email {
+    border-radius: 5px 5px;
+    height: 40px;
+    width: min(max(1rem, 20vw), 300px);
+    min-width: 175px;
+    padding:0;
+}
+
+input#submit {
+    border-radius: 0 5px 5px 0;
+    height: 40px;
+    width: 100px;
+    border: 1px #000 solid;
+    color: #fff;
+    background-color: #000;
+    margin-left: -1em;
+    padding:0;
+}
+
 div.contact-image-section {
     grid-area: mr;
     width: 100%;
@@ -323,7 +363,7 @@ img.contact-image {
 }
 
 
-/* Work on This! */
+
 div#contact-page div.nav-circles-section {
     align-self: end;
     margin-bottom: 1em;

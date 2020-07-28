@@ -16,18 +16,18 @@
 <body>
     <div id="main-container">
 
-        <div id="home-page">
+        <header id="header">
             <div class="home-page-section">
-                <nav id="nav-section">
-                    <img src="images/jtlogo.svg" class="main-logo">
+                <nav id="nav-bar">
+                    <img src="images/jtlogo.svg" class="main-logo" id="header-img">
                     <ul class="nav-links">
-                        <li><a href="#home-page">Home</a></li>
+                        <li><a class="nav-link" href="#header">Home</a></li>
                         </a>
 
-                        <li><a href="#about-page">About us</a></li>
+                        <li><a class="nav-link" href="#about-page">About us</a></li>
                         </a>
 
-                        <li><a href="#contact-page">Contact</a></li>
+                        <li><a class="nav-link" href="#contact-page">Contact</a></li>
                         </a>
                     </ul>
                 </nav>
@@ -37,7 +37,7 @@
 
                 <div class="nav-circles-section">
                     <ul class="nav-circles">
-                        <li><a href="#home-page">
+                        <li><a href="#header">
                                 <svg class="circle-nav-item">
                                     <circle cx="10" cy="10" r="7" fill="#000" />
                                 </svg>
@@ -57,7 +57,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </header>
 
         <div id="about-page">
             <div class="about-desc-section">
@@ -73,13 +73,17 @@
                     eget
                     quis.
                 </p>
+                <video id="video" width="100%" height="auto" controls>
+                    <source src="./media/japan.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
 
 
             <div class="about-image-section">
                 <div class="nav-circles-section">
                     <ul class="nav-circles">
-                        <li><a href="#home-page">
+                        <li><a href="#header">
                                 <svg class="circle-nav-item">
                                     <circle cx="10" cy="10" r="7" fill="#FBF4F4" />
                                 </svg>
@@ -102,25 +106,34 @@
         </div>
 
         <div id="contact-page">
-            <div class="contact-info">
-                <h1 class="contact-title">Contact Us</h1>
-                <ul class="contact-list">
-                    <li class="contact-list-items"><img src="images/phone-icon.svg">
-                        <p>+1 (800) 888 8888</p>
-                    </li>
-                    <li class="contact-list-items"><img src="images/map-icon.svg">
-                        <p>123 Road Way<br> Manhattan, NY 10156, USA</p>
-                    </li>
-                    <li class="contact-list-items"><img src="images/mail-icon.svg">
-                        <p>japantravelservice@jt.com</p>
-                    </li>
-                </ul>
+            <div class="contact-info-section">
+                <div class="contact-info">
+                    <h1 class="contact-title">Contact Us</h1>
+                    <ul class="contact-list">
+                        <li class="contact-list-items"><img src="images/phone-icon.svg">
+                            <p>+1 (800) 888 8888</p>
+                        </li>
+                        <li class="contact-list-items"><img src="images/map-icon.svg">
+                            <p>1234 Trailblazer Way<br> Cincinnati, OH 45207, USA</p>
+                        </li>
+                        <li class="contact-list-items"><img src="images/mail-icon.svg">
+                            <p>japantravelservice@jt.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <form id="form">
+                    <label for="email">Sign up for our monthly Newsletter!</label><br><br>
+                    <input type="email" id="email" placeholder="Your Email" />
+                    <input type="submit" id="submit" value="Subscribe">
+                </form>
             </div>
+
+
             <div class="contact-image-section">
                 <img src="images/contact-image-comb.png" class="contact-image">
                 <div class="nav-circles-section">
                     <ul class="nav-circles">
-                        <li><a href="#home-page">
+                        <li><a href="#header">
                                 <svg class="circle-nav-item">
                                     <circle cx="10" cy="10" r="7" fill="#D2C4C4" />
                                 </svg>
@@ -144,6 +157,7 @@
         <div id="footer"></div>
 
     </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
