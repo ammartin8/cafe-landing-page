@@ -40,4 +40,4 @@ The following technologies are used to build this application:
 
 ## Requirements to Run Application
 
-* For easy access, go to [www.amahmartin.me/jt-product-landing-page](https://amahmartin.me/)
+* For easy access, go to [www.amahmartin.me/jt-product-landing-page](https://amahmartin.me/jt-product-landing-page)
