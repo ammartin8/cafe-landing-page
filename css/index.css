@@ -263,6 +263,7 @@ div.contact-info-section {
     grid-template-areas:
         'contact'
         'email';
+    grid-template-rows: 3fr 1fr;
     width: 100%;
     max-height: 100vh;
     min-height: 100vh;
@@ -291,7 +292,7 @@ div.contact-list-section {
 }
 
 ul.contact-list li.contact-list-items img {
-    width: min(max(1rem, 3vw), 50px);
+    width: min(max(2rem, 2vw), 50px);
     height: auto;
 }
 
@@ -312,7 +313,7 @@ ul.contact-list>li.contact-list-items>p {
 
 form#form {
     grid-area: email;
-    align-self: start;
+    align-self: center;
 }
 
 #form label {
@@ -372,7 +373,7 @@ div#contact-page div.nav-circles-section {
 
 @media (min-width:320px) {
     /* smartphones, iPhone, portrait 480x320 phones */
-    /*Home Page*/
+    /*Home Page min-320px*/
     .home-page-section {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -417,7 +418,7 @@ div#contact-page div.nav-circles-section {
         justify-self: center;
     }
 
-    /*About Page*/
+    /*About Page min-320px*/
     #about-page {
         min-height: 100vh;
         max-height: 100vh;
@@ -446,7 +447,7 @@ div#contact-page div.nav-circles-section {
         display: none;
     }
 
-    /*Contact Page*/
+    /*Contact Page min-320px*/
     div#contact-page {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -464,7 +465,7 @@ div#contact-page div.nav-circles-section {
     div.contact-info-section {
         grid-area: ml;
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
         grid-template-areas:
             'contact'
             'email';
@@ -472,12 +473,11 @@ div#contact-page div.nav-circles-section {
         max-height: 100vh;
         min-height: 100vh;
         white-space: nowrap;
-        justify-content: center;
-        align-items: center;
     }
 
     .contact-info {
         grid-area: contact;
+        align-self: center;
     }
 
     form#form {
@@ -487,14 +487,7 @@ div#contact-page div.nav-circles-section {
 
 
     div.contact-image-section {
-        grid-area: mr;
-        width: 100%;
-        max-height: 100vh;
-        min-height: 100vh;
-
         display: none;
-        flex-direction: row;
-        justify-content: center;
     }
 }
 
@@ -625,11 +618,12 @@ div#contact-page div.nav-circles-section {
 
     .contact-info {
         grid-area: contact;
+        align-self: end;
     }
 
     form#form {
         grid-area: email;
-        align-self: start;
+        align-self: center;
     }
 
 
