@@ -1,10 +1,10 @@
-# Project Title: Product Landing Page - JT Travel Agency Product Landing Page
+# Project Title: JT Travel Agency Product Landing Page
 
 ***
 
 > Author: Amah Martin
 >
-> Last Updated: 7-26-2020
+> Last Updated: 7-28-2020
 
 ## Table of Contents
 
@@ -40,4 +40,4 @@ The following technologies are used to build this application:
 
 ## Requirements to Run Application
 
-<!-- * For easy access, go to [www.amahmartin.me/restaurant-landing-page](https://amahmartin.me/) -->
+* For easy access, go to [www.amahmartin.me/jt-product-landing-page](https://amahmartin.me/)
